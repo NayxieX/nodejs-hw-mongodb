@@ -1,10 +1,9 @@
-// Modul 2
 import { initMongoDB } from "./db/initMongoDB.js";
-import { startServer } from "./server.js";
+import { setupServer } from "./server.js";
 
-async function bootStrap() {
+async function startApp() {
   await initMongoDB();
-  startServer();
+  setupServer();
 }
 
-bootStrap();
+startApp();
