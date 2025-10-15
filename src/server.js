@@ -21,6 +21,10 @@ export const setupServer = () => {
     })
   );
 
+  app.get("/", (req, res) => {
+    res.json({ message: "Hello world!" });
+  });
+
   app.get("/contacts", handleGetAllContacts);
   app.get("/contacts/:contactId", handleGetContactById);
 
