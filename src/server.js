@@ -10,7 +10,7 @@ import {
 dotenv.config();
 
 export const setupServer = () => {
-  // Налаштування cors та логгера pino.
+
   const app = express();
   app.use(express.json());
   app.use(cors());
@@ -22,9 +22,9 @@ export const setupServer = () => {
     })
   );
 
-  app.use((req, res) => {
-    res.json({ message: "Hello world!" });
-  });
+    // app.use((req, res) => {
+    //   res.json({ message: 'Hello world!' });
+    // });
 
   app.get("/contacts", handleGetAllContacts);
   app.get("/contacts/:contactId", handleGetContactById);
@@ -32,6 +32,7 @@ export const setupServer = () => {
   app.use((req, res) => {
     res.status(404).json({ message: "Not found" });
   });
+
 
   const PORT = process.env.PORT || 3000;
 
