@@ -1,34 +1,30 @@
-import { model, Schema } from "mongoose";
+import mongoose from "mongoose";
 
-const studentsScheme = new Schema(
+const contactSchema = new mongoose.Schema(
   {
     name: {
       type: String,
       required: true,
     },
-    age: {
-      type: Number,
-      required: true,
-    },
-    gender: {
+    phoneNumber: {
       type: String,
       required: true,
-      enum: ["male", "female", "other"],
     },
-    avgMark: {
-      type: Number,
-      required: true,
-    },
-    onDuty: {
+    email: { type: String },
+    isFavourite: {
       type: Boolean,
-      required: true,
       default: false,
+    },
+    contactType: {
+      type: String,
+      enum: ["work", "home", "personal"],
+      required: true,
+      default: "personal",
     },
   },
   {
     timestamps: true,
-    versionKey: false,
   }
 );
 
-export const StudentsCollection = model("students", studentsScheme);
+export const Contact = mongoose.model("Contact", contactSchema);
