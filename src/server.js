@@ -10,7 +10,6 @@ import {
 dotenv.config();
 
 export const setupServer = () => {
-
   const app = express();
   app.use(express.json());
   app.use(cors());
@@ -22,17 +21,12 @@ export const setupServer = () => {
     })
   );
 
-    // app.use((req, res) => {
-    //   res.json({ message: 'Hello world!' });
-    // });
-
   app.get("/contacts", handleGetAllContacts);
   app.get("/contacts/:contactId", handleGetContactById);
 
   app.use((req, res) => {
     res.status(404).json({ message: "Not found" });
   });
-
 
   const PORT = process.env.PORT || 3000;
 
