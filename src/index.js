@@ -1,10 +1,14 @@
-// Modul 2
-import { initMongoDB } from "./db/initMongoDB.js";
-import { startServer } from "./server.js";
+import { setupServer } from './server.js';
+import { initMongoConnection } from './db/initMongoConnection.js';
 
-async function bootStrap() {
-  await initMongoDB();
-  startServer();
-}
+const startApp = async () => {
+  await initMongoConnection();
+  setupServer();
+};
 
-bootStrap();
+startApp();
+
+export const SORT_ORDER = {
+  ASC: 'asc',
+  DESC: 'desc',
+};
