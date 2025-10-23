@@ -1,9 +1,9 @@
-import express from 'express';
-import pino from 'pino-http';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import contactsRouter from './routers/contacts.js';
-import { errorHandler, notFoundHandler } from './middlewares/errorHandler.js';
+import express from "express";
+import pino from "pino-http";
+import cors from "cors";
+import dotenv from "dotenv";
+import contactsRouter from "./routers/contacts.js";
+import { errorHandler, notFoundHandler } from "./middlewares/errorHandler.js";
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 export const setupServer = () => {
@@ -13,18 +13,18 @@ export const setupServer = () => {
   app.use(
     pino({
       transport: {
-        target: 'pino-pretty',
+        target: "pino-pretty",
       },
-    }),
+    })
   );
 
-  app.get('/', (req, res) => {
+  app.get("/", (req, res) => {
     res.json({
-      message: 'hello world',
+      message: "hello world",
     });
   });
 
-  app.use('/contacts', contactsRouter);
+  app.use("/contacts", contactsRouter);
   app.use(notFoundHandler);
   app.use(errorHandler);
 
