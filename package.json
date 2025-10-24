@@ -8,16 +8,21 @@
     "start": "node src/index.js"
   },
   "devDependencies": {
+    "nodemon": "^3.1.10",
     "pino-pretty": "^13.1.2",
     "vite": "^7.1.7"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "http-errors": "^2.0.0",
+    "joi": "^18.0.1",
+    "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.20.0",
-    "mongoose": "^8.19.1",
-    "nodemon": "^3.1.10",
+    "mongoose": "^8.19.2",
     "pino-http": "^11.0.0"
   }
 }
