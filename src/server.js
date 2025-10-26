@@ -1,5 +1,6 @@
+import path from "node:path";
 import express from "express";
-import pino from "pino-http";
+// import pino from 'pino-http';
 import cors from "cors";
 import dotenv from "dotenv";
 import contactsRouter from "./routers/contacts.js";
@@ -13,16 +14,17 @@ const PORT = process.env.PORT || 3000;
 
 export const setupServer = () => {
   const app = express();
+  app.use("/photo", express.static(path.resolve("src", "uploads", "photo")));
   app.use(cookieParser());
   app.use(express.json());
   app.use(cors());
-  app.use(
-    pino({
-      transport: {
-        target: "pino-pretty",
-      },
-    })
-  );
+  // app.use(
+  //   pino({
+  //     transport: {
+  //       target: 'pino-pretty',
+  //     },
+  //   }),
+  // );
 
   app.get("/", (req, res) => {
     res.json({
