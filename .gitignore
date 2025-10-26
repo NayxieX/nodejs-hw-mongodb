@@ -11,6 +11,9 @@ dist
 dist-ssr
 *.local
 
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
 
 .env
 

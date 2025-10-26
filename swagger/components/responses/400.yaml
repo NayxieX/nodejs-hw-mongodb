@@ -1,0 +1,15 @@
+description: Bad Request – invalid input or validation error
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "error"
+        code:
+          type: integer
+          example: 400
+        message:
+          type: string
+          example: "Invalid request data!"
