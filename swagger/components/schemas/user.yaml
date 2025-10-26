@@ -26,4 +26,4 @@ properties:
     description: "User's password"
     type: string
     format: password
-    example: 123456
+    example: "123456"

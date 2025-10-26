@@ -11,10 +11,10 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3000/api-docs"
+      "url": "http://localhost:3000"
     },
     {
-      "url": null
+      "url": "https://nodejs-hw-mongodb-9j6j.onrender.com"
     }
   ],
   "tags": [
@@ -645,7 +645,7 @@
                   "password": {
                     "type": "string",
                     "format": "password",
-                    "example": 123456
+                    "example": "123456"
                   }
                 }
               }
@@ -899,7 +899,7 @@
                     "description": "User's new password",
                     "type": "string",
                     "format": "password",
-                    "example": 123456
+                    "example": "123456"
                   }
                 }
               }
@@ -1041,7 +1041,7 @@
             "description": "User's password",
             "type": "string",
             "format": "password",
-            "example": 123456
+            "example": "123456"
           }
         }
       }
