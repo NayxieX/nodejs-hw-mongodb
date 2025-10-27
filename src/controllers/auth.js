@@ -8,7 +8,7 @@ import {
   loginOrRegister,
 } from "../services/auth.js";
 
-import { getAuthUrl, validateCode } from "../utils/googleOAuth.js";
+// import { getAuthUrl, validateCode } from "../utils/googleOAuth.js";
 
 export async function registerUserController(req, res) {
   const user = await registerUser(req.body);
