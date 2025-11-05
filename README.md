@@ -1,7 +1,7 @@
 # README
 
 Прізвище: Федорченко
-Ім’я: Эвгеній
+Ім’я: Євгеній
 
 ## Про мене
 Я Fullstack Developer та навчаюся в університеті Neoversity на спеціальність AI in Software Engineering.
